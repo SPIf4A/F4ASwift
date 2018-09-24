@@ -4,7 +4,7 @@
 //
 //  Created by Raja on 23/09/2018.
 //  Copyright © 2018 Raja. All rights reserved.
-//
+// https://github.com/SPIf4A/F4ASwift.git
 
 import UIKit
 
@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+         FantasyManager.fantasyBegin().initialize(withGameID: "5", apiKey: "25d96c538508c648ac7c4e9c89c514f9f55a05b2cbc5b4bcc34bd14e94a05ffb")
         // Override point for customization after application launch.
         return true
     }
