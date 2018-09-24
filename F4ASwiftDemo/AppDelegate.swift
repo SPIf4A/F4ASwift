@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-         FantasyManager.fantasyBegin().initialize(withGameID: "5", apiKey: "25d96c538508c648ac7c4e9c89c514f9f55a05b2cbc5b4bcc34bd14e94a05ffb")
+         FantasyManager.fantasyBegin().initialize(withGameID: "xx", apiKey: "xxxxx")
         // Override point for customization after application launch.
         return true
     }

@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
        
-        
         FantasyManager.fantasyBegin().inView(self)
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -23,6 +22,8 @@ class ViewController: UIViewController {
     
     func GameCompleted() {
        
+        // Please check the matchup id null or got value before update score.
+        // If null their is no matchup id
         
         let GetMatchId = FantasyManager.fantasyBegin().getCurrentMatchID
             
