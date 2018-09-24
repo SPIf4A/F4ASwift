@@ -14,6 +14,9 @@
 		D3A044B72157DF90000D73DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A044B52157DF90000D73DD /* LaunchScreen.storyboard */; };
 		D3A044C22157DF91000D73DD /* F4ASwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A044C12157DF91000D73DD /* F4ASwiftDemoTests.swift */; };
 		D3A044CD2157DF91000D73DD /* F4ASwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A044CC2157DF91000D73DD /* F4ASwiftDemoUITests.swift */; };
+		D3A044DB2157DFB6000D73DD /* F4A.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A044DA2157DFB6000D73DD /* F4A.framework */; };
+		D3A044DC2157DFCD000D73DD /* F4A.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A044DA2157DFB6000D73DD /* F4A.framework */; };
+		D3A044DD2157DFCD000D73DD /* F4A.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3A044DA2157DFB6000D73DD /* F4A.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D3A044DE2157DFCD000D73DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D3A044DD2157DFCD000D73DD /* F4A.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D3A044A92157DF8E000D73DD /* F4ASwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F4ASwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A044AC2157DF8E000D73DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +64,8 @@
 		D3A044C82157DF91000D73DD /* F4ASwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = F4ASwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A044CC2157DF91000D73DD /* F4ASwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F4ASwiftDemoUITests.swift; sourceTree = "<group>"; };
 		D3A044CE2157DF91000D73DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A044DA2157DFB6000D73DD /* F4A.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = F4A.framework; sourceTree = "<group>"; };
+		D3A044DF2157E09A000D73DD /* F4A-bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "F4A-bridging.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A044DC2157DFCD000D73DD /* F4A.framework in Frameworks */,
+				D3A044DB2157DFB6000D73DD /* F4A.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +98,7 @@
 		D3A044A02157DF8E000D73DD = {
 			isa = PBXGroup;
 			children = (
+				D3A044DA2157DFB6000D73DD /* F4A.framework */,
 				D3A044AB2157DF8E000D73DD /* F4ASwiftDemo */,
 				D3A044C02157DF91000D73DD /* F4ASwiftDemoTests */,
 				D3A044CB2157DF91000D73DD /* F4ASwiftDemoUITests */,
@@ -103,6 +125,7 @@
 				D3A044B32157DF90000D73DD /* Assets.xcassets */,
 				D3A044B52157DF90000D73DD /* LaunchScreen.storyboard */,
 				D3A044B82157DF90000D73DD /* Info.plist */,
+				D3A044DF2157E09A000D73DD /* F4A-bridging.h */,
 			);
 			path = F4ASwiftDemo;
 			sourceTree = "<group>";
@@ -135,6 +158,7 @@
 				D3A044A52157DF8E000D73DD /* Sources */,
 				D3A044A62157DF8E000D73DD /* Frameworks */,
 				D3A044A72157DF8E000D73DD /* Resources */,
+				D3A044DE2157DFCD000D73DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -431,15 +455,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LTH63A4U6D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = F4ASwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.f4awsiftdemo.F4ASwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/spi/Desktop/F4ASwiftDemo/F4ASwiftDemo/F4A-bridging.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,15 +479,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LTH63A4U6D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = F4ASwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.f4awsiftdemo.F4ASwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/spi/Desktop/F4ASwiftDemo/F4ASwiftDemo/F4A-bridging.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
